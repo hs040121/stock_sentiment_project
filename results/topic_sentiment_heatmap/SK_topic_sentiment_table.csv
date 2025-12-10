@@ -1,0 +1,3 @@
+﻿topic,n,mean_sent,pos_ratio,topic_label,top_words,ticker
+0,175,0.4057142857142857,0.7028571428571428,SK | T0(오늘/자사주),"오늘, 자사주, 코스피, 전과범, 개잡주",SK
+1,20,0.5,0.75,SK | T1(sk/pbr),"sk, pbr, per, 수급, 전망",SK
