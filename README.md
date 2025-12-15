@@ -52,6 +52,7 @@
 
 📌 **[그림 2] 종목별 댓글 수 TOP 15**  
 - `results/figures_clean/02_count_top15.png`
+![Uploading 02_count_top15.png…]()
 
 <img width="2200" height="1320" alt="02_count_top15" src="여기에_02번_이미지_URL" />
 
