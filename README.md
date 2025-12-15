@@ -68,6 +68,8 @@
 📌 **[그림 위치]**  
 - `results/figures_clean/01_overall_sentiment.png`
 
+<img width="1540" height="1100" alt="01_overall_sentiment" src="https://github.com/user-attachments/assets/225e22eb-523f-4fc8-bd81-e2cf9d48bfd9" />
+
 ---
 
 ### 종목별 감성 비교
@@ -76,7 +78,31 @@
 
 📌 **[그림 위치]**  
 - `results/figures_clean/03_score_top10.png`  
-- `results/figures_clean/04_score_bottom10.png`
+
+<img width="2200" height="1320" alt="03_score_top10" src="https://github.com/user-attachments/assets/a5959b59-fe04-47b4-a371-b6cdc6c4d5ff" />
+
+- `results/figures_clean/04_score_bottom10.png`  
+
+<img width="2200" height="1320" alt="04_score_bottom10" src="https://github.com/user-attachments/assets/84997a4a-a309-45bc-ae90-d8ce3f59f65d" />
+
+---
+
+### TOP10 종목 긍·부정 비율 비교
+종목별 평균 감성 점수 비교를 보완하기 위해,  
+긍정 비율 기준 상위 10개 종목을 대상으로 긍·부정 비율을 비교하였다.
+
+📌 **[그림 위치]**  
+- `results/figures_clean/05_top10_pos_neg_ratio.png`
+
+<!-- 아래 src에 GitHub 이미지 URL만 넣으면 됨 -->
+<img width="2200" height="1320" alt="05_top10_pos_neg_ratio" src="여기에_05번_이미지_URL_붙여넣기" />
+<img width="2200" height="1320" alt="05_top10_pos_neg_ratio" src="https://github.com/user-attachments/assets/a62b09cb-a019-4184-8011-7a1f3629230f" />
+
+#### 해석
+대부분의 상위 종목에서 **긍정 비율이 부정보다 높게 나타났으며**,  
+이는 해당 종목들에 대해 전반적으로 우호적인 투자자 심리가 형성되어 있음을 시사한다.  
+다만, 본 분석은 종목 단위 집계 결과이므로 개별 이슈나 담론의 성격을 설명하는 데에는 한계가 있다.  
+이에 따라 다음 절에서는 **토픽 모델링과 감성 분석을 결합한 분석**을 수행하였다.
 
 ---
 
@@ -105,10 +131,14 @@
 - `results/topic_sentiment_heatmap/01_heatmap_topic_mean_sent.png`
 - `results/topic_sentiment_heatmap/02_heatmap_topic_pos_ratio.png`
 
+<!-- 원하면 아래처럼 이미지도 붙이면 됨 (URL 채우기)
+<img width="2200" height="1320" alt="01_heatmap_topic_mean_sent" src="여기에_히트맵1_URL" />
+<img width="2200" height="1320" alt="02_heatmap_topic_pos_ratio" src="여기에_히트맵2_URL" />
+-->
+
 ---
 
 ### 주요 분석 결과
-
 - 동일 종목 내에서도 **토픽별 감성 편차가 큼**
 - 부정적인 종목은 **특정 부정 토픽에 감성이 집중**
 - 긍정적인 종목은 **여러 토픽에서 고른 긍정 분포**
