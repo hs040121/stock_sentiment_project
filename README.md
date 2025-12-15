@@ -145,9 +145,11 @@
 
 📌 **[그림 6] 토픽 × 평균 감성 히트맵**  
 - `results/topic_sentiment_heatmap/01_heatmap_topic_mean_sent.png`
+<img width="2640" height="2970" alt="01_heatmap_topic_mean_sent" src="https://github.com/user-attachments/assets/4e231503-dab4-4507-a8cf-c87fad6b1871" />
 
 📌 **[그림 7] 토픽 × 긍정 비율 히트맵**  
 - `results/topic_sentiment_heatmap/02_heatmap_topic_pos_ratio.png`
+<img width="2640" height="2970" alt="02_heatmap_topic_pos_ratio" src="https://github.com/user-attachments/assets/a38815b4-e7d9-4aea-8448-0c20a209bc41" />
 
 ---
 
