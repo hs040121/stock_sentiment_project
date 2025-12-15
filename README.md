@@ -1,4 +1,4 @@
-# 📊 KoELECTRA 기반 주식 종목별 투자자 감성 및 토픽–감성 결합 분석
+# KoELECTRA 기반 주식 종목별 투자자 감성 및 토픽–감성 결합 분석
 
 본 프로젝트는 네이버 증권 종목 토론 게시판 데이터를 활용하여  
 **KoELECTRA 기반 감성 분석**과 **BERTopic 기반 토픽 모델링**을 결합함으로써,  
@@ -6,7 +6,7 @@
 
 ---
 
-## 📌 프로젝트 개요
+## 프로젝트 개요
 
 - **주제**: 주식 종목별 투자자 감성 분석 및 토픽–감성 결합 분석  
 - **데이터 출처**: 네이버 증권 종목 토론 게시판  
@@ -19,7 +19,7 @@
 
 ---
 
-## 🎯 연구 목적
+## 연구 목적
 
 기존의 감성 분석은 종목 단위 평균 감성 지표에 의존하는 경우가 많아,  
 **투자자 감성이 어떤 이슈(토픽)에 의해 형성되는지**를 설명하는 데 한계가 있다.
@@ -31,7 +31,7 @@
 
 ---
 
-## 🗂 데이터 구성 및 전처리
+## 데이터 구성 및 전처리
 
 - **수집 항목**: 종목명, 게시글 제목  
 - **전처리 과정**
@@ -40,7 +40,7 @@
   - 중복 및 의미 없는 문장 제거
 - **최종 데이터 수**: 17,477건  
 
-> ⚠️ 데이터 저작권 문제로 원본 데이터는 GitHub에 직접 업로드하지 않고,  
+> 데이터 저작권 문제로 원본 데이터는 GitHub에 직접 업로드하지 않고,  
 > 수집 및 전처리 코드를 공개하였다.
 
 ---
@@ -50,11 +50,11 @@
 분석 대상 종목 선정을 위해,  
 종목별 게시글(댓글) 수를 집계하여 투자자 관심도의 분포를 확인하였다.
 
-📌 **[그림 2] 종목별 댓글 수 TOP 15**  
+**[그림 2] 종목별 댓글 수 TOP 15**  
 - `results/figures_clean/02_count_top15.png`
 <img width="2200" height="1320" alt="02_count_top15" src="https://github.com/user-attachments/assets/57dd8442-948c-4afd-a707-5d155c0267f6" />
 
-<img width="2200" height="1320" alt="02_count_top15" src="여기에_02번_이미지_URL" />
+
 
 **해석**  
 댓글 수가 많은 종목일수록 투자자 담론이 활발하게 형성되어 있음을 의미한다.  
@@ -63,7 +63,7 @@
 
 ---
 
-## 🤖 감성 분석 모델
+## 감성 분석 모델
 
 ### 라벨링 전략
 - 긍정(1): 상승 기대, 호재, 긍정적 전망  
@@ -78,13 +78,13 @@
 
 ---
 
-## 📈 기본 분석 결과
+## 기본 분석 결과
 
 ### 전체 감성 분포
 
 전체 데이터에서 긍정 및 부정 감성이 비교적 균형 잡힌 분포를 보였다.
 
-📌 **[그림 1] 전체 감성 분포**  
+**[그림 1] 전체 감성 분포**  
 - `results/figures_clean/01_overall_sentiment.png`
 
 <img width="1540" height="1100" alt="01_overall_sentiment" src="https://github.com/user-attachments/assets/225e22eb-523f-4fc8-bd81-e2cf9d48bfd9" />
@@ -96,10 +96,10 @@
 종목별 평균 감성 점수 및 긍정 비율을 비교한 결과,  
 종목 간 투자자 감성 차이가 뚜렷하게 나타났다.
 
-📌 **[그림 3] 평균 감성 점수 TOP 10**  
+**[그림 3] 평균 감성 점수 TOP 10**  
 <img width="2200" height="1320" alt="03_score_top10" src="https://github.com/user-attachments/assets/a5959b59-fe04-47b4-a371-b6cdc6c4d5ff" />
 
-📌 **[그림 4] 평균 감성 점수 BOTTOM 10**  
+**[그림 4] 평균 감성 점수 BOTTOM 10**  
 <img width="2200" height="1320" alt="04_score_bottom10" src="https://github.com/user-attachments/assets/84997a4a-a309-45bc-ae90-d8ce3f59f65d" />
 
 ---
@@ -109,7 +109,7 @@
 종목별 평균 감성 점수 분석을 보완하기 위해,  
 긍정 비율 기준 상위 10개 종목을 대상으로 긍·부정 비율을 비교하였다.
 
-📌 **[그림 5] TOP10 종목 긍·부정 비율**  
+**[그림 5] TOP10 종목 긍·부정 비율**  
 - `results/figures_clean/05_top10_pos_neg_ratio.png`
 
 <img width="2200" height="1320" alt="05_top10_pos_neg_ratio" src="https://github.com/user-attachments/assets/a62b09cb-a019-4184-8011-7a1f3629230f" />
@@ -122,7 +122,7 @@
 
 ---
 
-## 🧠 토픽 모델링
+## 토픽 모델링
 
 - **토픽 모델**: BERTopic  
 - **임베딩 모델**: Sentence-BERT (multilingual)  
@@ -135,7 +135,7 @@
 
 ---
 
-## 🔍 토픽–감성 결합 분석 (확장 분석)
+## 토픽–감성 결합 분석 (확장 분석)
 
 ### 분석 방법
 - 종목별 주요 토픽에 대해 다음 지표를 계산하였다.
@@ -143,11 +143,11 @@
   - 긍정 비율 (Positive Ratio)
 - 결과를 히트맵(Heatmap) 형태로 시각화하였다.
 
-📌 **[그림 6] 토픽 × 평균 감성 히트맵**  
+**[그림 6] 토픽 × 평균 감성 히트맵**  
 - `results/topic_sentiment_heatmap/01_heatmap_topic_mean_sent.png`
 <img width="2640" height="2970" alt="01_heatmap_topic_mean_sent" src="https://github.com/user-attachments/assets/4e231503-dab4-4507-a8cf-c87fad6b1871" />
 
-📌 **[그림 7] 토픽 × 긍정 비율 히트맵**  
+**[그림 7] 토픽 × 긍정 비율 히트맵**  
 - `results/topic_sentiment_heatmap/02_heatmap_topic_pos_ratio.png`
 <img width="2640" height="2970" alt="02_heatmap_topic_pos_ratio" src="https://github.com/user-attachments/assets/a38815b4-e7d9-4aea-8448-0c20a209bc41" />
 
@@ -164,7 +164,7 @@
 
 ---
 
-## 🧾 프로젝트 구조
+## 프로젝트 구조
 
 본 프로젝트는 데이터 전처리 → 감성 분석 → 토픽 모델링 → 결합 분석의  
 단계적 파이프라인 구조로 설계되었다.
@@ -177,7 +177,7 @@
 
 ---
 
-## ✅ 결론
+## 결론
 
 본 프로젝트는 KoELECTRA 기반 감성 분석과 BERTopic 기반 토픽 모델링을 결합하여,  
 주식 종목별 투자자 담론을 **토픽 단위에서 구조적으로 분석**하였다.  
