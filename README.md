@@ -1,5 +1,14 @@
 # KoELECTRA 기반 주식 종목별 투자자 감성 및 토픽–감성 결합 분석
 
+<p align="center">
+  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Transformers-FFD21E?style=flat-square&logo=huggingface&logoColor=black"/>
+  <img src="https://img.shields.io/badge/KoELECTRA-4B8BBE?style=flat-square&logoColor=white"/>
+  <img src="https://img.shields.io/badge/BERTopic-111827?style=flat-square&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Sentence--BERT-3B82F6?style=flat-square&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
+</p>
+
 본 프로젝트는 네이버 증권 종목 토론 게시판 데이터를 활용하여  
 **KoELECTRA 기반 감성 분석**과 **BERTopic 기반 토픽 모델링**을 결합함으로써,  
 주식 종목별 투자자 담론의 구조적 특성을 분석하는 것을 목표로 한다.
@@ -97,69 +106,4 @@
 이는 해당 종목들에 대해 전반적으로 우호적인 투자자 심리가 형성되어 있음을 시사한다.  
 다만, 본 분석은 종목 단위 집계 결과이므로  
 개별 이슈나 담론의 성격을 설명하는 데에는 한계가 있다.  
-이에 따라 감성 분포를 토픽 단위로 분해하여 분석할 필요성이 제기된다.
-
----
-
-## 토픽 모델링
-
-- **토픽 모델**: BERTopic  
-- **임베딩 모델**: Sentence-BERT (multilingual)  
-- 아웃라이어 토픽(-1)은 분석에서 제외  
-
-> BERTopic은 문서 임베딩 기반 토픽 모델로,  
-> 짧은 텍스트(게시글 제목)에서도 비교적 안정적인 토픽 분리가 가능하다는 장점이 있다.
-
-### 분석 대상 종목 선정 기준
-1. 댓글 수 상위 종목  
-2. 종목별 최소 문서 수 80개 이상  
-3. 유효 토픽이 충분히 생성된 종목  
-
----
-
-## 토픽–감성 결합 분석 (확장 분석)
-
-### 분석 방법
-- 종목별 주요 토픽에 대해 다음 지표를 계산하였다.
-  - 평균 감성 점수
-  - 긍정 비율
-- 결과를 히트맵(Heatmap) 형태로 시각화하였다.
-
-**[그림 6] 토픽 × 평균 감성 히트맵**  
-<img width="2640" height="2970" alt="01_heatmap_topic_mean_sent" src="https://github.com/user-attachments/assets/4e231503-dab4-4507-a8cf-c87fad6b1871" />
-
-**[그림 7] 토픽 × 긍정 비율 히트맵**  
-<img width="2640" height="2970" alt="02_heatmap_topic_pos_ratio" src="https://github.com/user-attachments/assets/a38815b4-e7d9-4aea-8448-0c20a209bc41" />
-
----
-
-### 주요 분석 결과
-
-- 동일 종목 내에서도 **토픽별 감성 편차가 크게 나타남**
-- 부정적인 종목은 **특정 부정 토픽에 감성이 집중**
-- 긍정적인 종목은 **여러 토픽에서 고른 긍정 분포를 보임**
-
-> 이를 통해 단순 감성 평균을 넘어,  
-> **투자자 감성이 형성되는 구조적 요인**을 확인할 수 있었다.
-
----
-
-## 프로젝트 구조
-
-본 프로젝트는 데이터 전처리 → 감성 분석 → 토픽 모델링 → 결합 분석의  
-단계적 파이프라인 구조로 설계되었다.
-
-- `01~02`: 데이터 점검 및 학습 데이터셋 구성  
-- `03~04`: KoELECTRA 기반 감성 분석 모델 학습 및 적용  
-- `05~06`: 토픽 모델링 및 종목 단위 감성 지표 집계  
-- `08`: 기초 분석 및 데이터 분포 시각화  
-- `11`: 토픽–감성 결합 히트맵 생성 (확장 분석)
-
----
-
-## 결론
-
-본 프로젝트는 KoELECTRA 기반 감성 분석과 BERTopic 기반 토픽 모델링을 결합하여,  
-주식 종목별 투자자 담론을 **토픽 단위에서 구조적으로 분석**하였다.  
-이를 통해 단순 지표 수준의 감성 분석을 넘어,  
-투자자 담론을 구조적으로 해석할 수 있는 분석 프레임워크를 제시하였다.
+이에 따라 감성
